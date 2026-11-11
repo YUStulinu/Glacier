@@ -1,0 +1,8 @@
+{
+  "rust-analyzer.linkedProjects": ["core/Cargo.toml"],
+  "go.toolsEnvVars": { "GOFLAGS": "" },
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+  "python.testing.pytestEnabled": true,
+  "python.testing.cwd": "${workspaceFolder}/eval",
+  "python.testing.pytestArgs": ["tests"]
+}

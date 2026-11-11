@@ -1,0 +1,20 @@
+{
+ "local": {
+  "backup_seconds": 17.185245399996347,
+  "restore_seconds": 81.67227329999878,
+  "check_seconds": 1.1319451999952435,
+  "bytes": 1277805815,
+  "stored": 271665601,
+  "restore_identical": true,
+  "check_ok": true
+ },
+ "s3": {
+  "backup_seconds": 16.175347199998214,
+  "restore_seconds": 78.25110660000064,
+  "check_seconds": 1.800143400003435,
+  "bytes": 1277805815,
+  "stored": 271530655,
+  "restore_identical": true,
+  "check_ok": true
+ }
+}

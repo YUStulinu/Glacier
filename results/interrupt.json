@@ -1,0 +1,175 @@
+{
+ "summary": {
+  "rounds": 15,
+  "check_failures": 0,
+  "killed_mid_backup": 15,
+  "full_backup_seconds": 17.067559000002802,
+  "full_stored_bytes": 271276926,
+  "resumed_upload_fraction_mean": 0.9019859094097815,
+  "final_restore_identical": true,
+  "final_check_ok": true,
+  "unreferenced_after_prune": 0,
+  "repo_bytes_before_prune": 278975322,
+  "repo_bytes_after_prune": 278975264,
+  "prune": {
+   "blobs_kept": 89835,
+   "blobs_removed": 0,
+   "bytes_after": 271737630,
+   "bytes_before": 271737630,
+   "packs_deleted": 0,
+   "packs_repacked": 0
+  }
+ },
+ "rounds": [
+  {
+   "killed_after_s": 6.128383755939505,
+   "finished_before_kill": false,
+   "check_ok": true,
+   "errors": [],
+   "unreferenced_packs": 0,
+   "pack_bytes_at_kill": 0,
+   "resumed_stored_new": 271108887,
+   "check_after_resume_ok": true
+  },
+  {
+   "killed_after_s": 3.7664576408467774,
+   "finished_before_kill": false,
+   "check_ok": true,
+   "errors": [],
+   "unreferenced_packs": 0,
+   "pack_bytes_at_kill": 0,
+   "resumed_stored_new": 271696627,
+   "check_after_resume_ok": true
+  },
+  {
+   "killed_after_s": 10.59464591899503,
+   "finished_before_kill": false,
+   "check_ok": true,
+   "errors": [],
+   "unreferenced_packs": 0,
+   "pack_bytes_at_kill": 102208803,
+   "resumed_stored_new": 170929006,
+   "check_after_resume_ok": true
+  },
+  {
+   "killed_after_s": 2.695804377151802,
+   "finished_before_kill": false,
+   "check_ok": true,
+   "errors": [],
+   "unreferenced_packs": 0,
+   "pack_bytes_at_kill": 0,
+   "resumed_stored_new": 271758305,
+   "check_after_resume_ok": true
+  },
+  {
+   "killed_after_s": 9.023714080435619,
+   "finished_before_kill": false,
+   "check_ok": true,
+   "errors": [],
+   "unreferenced_packs": 0,
+   "pack_bytes_at_kill": 68279456,
+   "resumed_stored_new": 204597090,
+   "check_after_resume_ok": true
+  },
+  {
+   "killed_after_s": 6.699889632042421,
+   "finished_before_kill": false,
+   "check_ok": true,
+   "errors": [],
+   "unreferenced_packs": 1,
+   "pack_bytes_at_kill": 17059566,
+   "resumed_stored_new": 271443740,
+   "check_after_resume_ok": true
+  },
+  {
+   "killed_after_s": 2.4986759564235066,
+   "finished_before_kill": false,
+   "check_ok": true,
+   "errors": [],
+   "unreferenced_packs": 0,
+   "pack_bytes_at_kill": 0,
+   "resumed_stored_new": 271302838,
+   "check_after_resume_ok": true
+  },
+  {
+   "killed_after_s": 8.635307351936369,
+   "finished_before_kill": false,
+   "check_ok": true,
+   "errors": [],
+   "unreferenced_packs": 0,
+   "pack_bytes_at_kill": 34210388,
+   "resumed_stored_new": 237887898,
+   "check_after_resume_ok": true
+  },
+  {
+   "killed_after_s": 2.2187233901623045,
+   "finished_before_kill": false,
+   "check_ok": true,
+   "errors": [],
+   "unreferenced_packs": 0,
+   "pack_bytes_at_kill": 0,
+   "resumed_stored_new": 271545119,
+   "check_after_resume_ok": true
+  },
+  {
+   "killed_after_s": 7.627774532803738,
+   "finished_before_kill": false,
+   "check_ok": true,
+   "errors": [],
+   "unreferenced_packs": 0,
+   "pack_bytes_at_kill": 34180808,
+   "resumed_stored_new": 238082299,
+   "check_after_resume_ok": true
+  },
+  {
+   "killed_after_s": 2.6605651506642767,
+   "finished_before_kill": false,
+   "check_ok": true,
+   "errors": [],
+   "unreferenced_packs": 0,
+   "pack_bytes_at_kill": 0,
+   "resumed_stored_new": 271706663,
+   "check_after_resume_ok": true
+  },
+  {
+   "killed_after_s": 2.9453556658518467,
+   "finished_before_kill": false,
+   "check_ok": true,
+   "errors": [],
+   "unreferenced_packs": 0,
+   "pack_bytes_at_kill": 0,
+   "resumed_stored_new": 271488600,
+   "check_after_resume_ok": true
+  },
+  {
+   "killed_after_s": 7.503160945858846,
+   "finished_before_kill": false,
+   "check_ok": true,
+   "errors": [],
+   "unreferenced_packs": 1,
+   "pack_bytes_at_kill": 17093993,
+   "resumed_stored_new": 271460555,
+   "check_after_resume_ok": true
+  },
+  {
+   "killed_after_s": 12.996633837694427,
+   "finished_before_kill": false,
+   "check_ok": true,
+   "errors": [],
+   "unreferenced_packs": 1,
+   "pack_bytes_at_kill": 186987945,
+   "resumed_stored_new": 103574215,
+   "check_after_resume_ok": true
+  },
+  {
+   "killed_after_s": 3.397153720990385,
+   "finished_before_kill": false,
+   "check_ok": true,
+   "errors": [],
+   "unreferenced_packs": 0,
+   "pack_bytes_at_kill": 0,
+   "resumed_stored_new": 271737630,
+   "check_after_resume_ok": true
+  }
+ ]
+}

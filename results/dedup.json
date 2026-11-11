@@ -1,0 +1,174 @@
+{
+ "kernel": [
+  {
+   "strategy": "fastcdc-16384",
+   "files": 640900,
+   "logical_bytes": 10612502246,
+   "chunks": 1035634,
+   "unique_chunks": 246573,
+   "unique_bytes": 2710997011,
+   "unique_compressed_bytes": 709757221,
+   "dedup_ratio": 3.9146123005445097,
+   "total_ratio": 14.952299084816215,
+   "seconds": 529.087567
+  },
+  {
+   "strategy": "fastcdc-65536",
+   "files": 640900,
+   "logical_bytes": 10612502246,
+   "chunks": 705166,
+   "unique_chunks": 181374,
+   "unique_bytes": 3320629386,
+   "unique_compressed_bytes": 804675364,
+   "dedup_ratio": 3.195930955361364,
+   "total_ratio": 13.188551210572417,
+   "seconds": 608.0499979
+  },
+  {
+   "strategy": "fastcdc-262144",
+   "files": 640900,
+   "logical_bytes": 10612502246,
+   "chunks": 651065,
+   "unique_chunks": 169875,
+   "unique_bytes": 3527356246,
+   "unique_compressed_bytes": 826517067,
+   "dedup_ratio": 3.0086278521015593,
+   "total_ratio": 12.840027955526779,
+   "seconds": 627.3550928
+  },
+  {
+   "strategy": "fastcdc-1048576",
+   "files": 640900,
+   "logical_bytes": 10612502246,
+   "chunks": 642426,
+   "unique_chunks": 168448,
+   "unique_bytes": 3591819978,
+   "unique_compressed_bytes": 826987526,
+   "dedup_ratio": 2.954630886570563,
+   "total_ratio": 12.832723484150836,
+   "seconds": 915.977632
+  },
+  {
+   "strategy": "fastcdc-2097152",
+   "files": 640900,
+   "logical_bytes": 10612502246,
+   "chunks": 641404,
+   "unique_chunks": 168308,
+   "unique_bytes": 3607004572,
+   "unique_compressed_bytes": 826496577,
+   "dedup_ratio": 2.942192623868956,
+   "total_ratio": 12.840346277683373,
+   "seconds": 1277.2749172
+  },
+  {
+   "strategy": "fixed-65536",
+   "files": 640900,
+   "logical_bytes": 10612502246,
+   "chunks": 716262,
+   "unique_chunks": 188759,
+   "unique_bytes": 3480901698,
+   "unique_compressed_bytes": 832450448,
+   "dedup_ratio": 3.0487796458307224,
+   "total_ratio": 12.748509261418524,
+   "seconds": 615.6168014
+  },
+  {
+   "strategy": "whole-file",
+   "files": 640900,
+   "logical_bytes": 10612502246,
+   "chunks": 640900,
+   "unique_chunks": 168209,
+   "unique_bytes": 3650071210,
+   "unique_compressed_bytes": 827262607,
+   "dedup_ratio": 2.9074781382141857,
+   "total_ratio": 12.828456352554564,
+   "seconds": 565.8180183
+  }
+ ],
+ "projects": [
+  {
+   "strategy": "fastcdc-16384",
+   "files": 10309,
+   "logical_bytes": 322243854,
+   "chunks": 24726,
+   "unique_chunks": 9737,
+   "unique_bytes": 132866714,
+   "unique_compressed_bytes": 100373597,
+   "dedup_ratio": 2.4253166522956233,
+   "total_ratio": 3.2104444159752488,
+   "seconds": 8.3182047
+  },
+  {
+   "strategy": "fastcdc-65536",
+   "files": 10309,
+   "logical_bytes": 322243854,
+   "chunks": 13386,
+   "unique_chunks": 4978,
+   "unique_bytes": 134122488,
+   "unique_compressed_bytes": 100191187,
+   "dedup_ratio": 2.4026086811035,
+   "total_ratio": 3.2162894127604256,
+   "seconds": 2.1935215
+  },
+  {
+   "strategy": "fastcdc-262144",
+   "files": 10309,
+   "logical_bytes": 322243854,
+   "chunks": 10733,
+   "unique_chunks": 3843,
+   "unique_bytes": 134578531,
+   "unique_compressed_bytes": 100123789,
+   "dedup_ratio": 2.394467019408913,
+   "total_ratio": 3.218454447424078,
+   "seconds": 2.1581711
+  },
+  {
+   "strategy": "fastcdc-1048576",
+   "files": 10309,
+   "logical_bytes": 322243854,
+   "chunks": 10340,
+   "unique_chunks": 3626,
+   "unique_bytes": 135413639,
+   "unique_compressed_bytes": 100666902,
+   "dedup_ratio": 2.3797001275477134,
+   "total_ratio": 3.201090404073426,
+   "seconds": 6.0493077
+  },
+  {
+   "strategy": "fastcdc-2097152",
+   "files": 10309,
+   "logical_bytes": 322243854,
+   "chunks": 10280,
+   "unique_chunks": 3588,
+   "unique_bytes": 135413639,
+   "unique_compressed_bytes": 100614922,
+   "dedup_ratio": 2.3797001275477134,
+   "total_ratio": 3.2027441615469323,
+   "seconds": 13.8784062
+  },
+  {
+   "strategy": "fixed-65536",
+   "files": 10309,
+   "logical_bytes": 322243854,
+   "chunks": 13837,
+   "unique_chunks": 5182,
+   "unique_bytes": 135413639,
+   "unique_compressed_bytes": 101464199,
+   "dedup_ratio": 2.3797001275477134,
+   "total_ratio": 3.175936509388893,
+   "seconds": 1.6276855000000001
+  },
+  {
+   "strategy": "whole-file",
+   "files": 10309,
+   "logical_bytes": 322243854,
+   "chunks": 10309,
+   "unique_chunks": 3572,
+   "unique_bytes": 135413639,
+   "unique_compressed_bytes": 100614667,
+   "dedup_ratio": 2.3797001275477134,
+   "total_ratio": 3.202752278651382,
+   "seconds": 1.0441563
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  core:
+    name: Rust core (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy
+      - name: Clippy
+        working-directory: core
+        run: cargo clippy --all-targets -- -D warnings
+      - name: Tests (backup, restore, incremental, corruption, interrupted backup, prune)
+        working-directory: core
+        run: cargo test
+      - name: Release build
+        working-directory: core
+        run: cargo build --release
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Python tests (end to end through the CLI)
+        working-directory: eval
+        run: |
+          pip install -r requirements.txt
+          python -m pytest -q tests
+
+  service:
+    name: Go service and S3 round trip
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: service/go.mod
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Vet and test
+        working-directory: service
+        run: |
+          test -z "$(gofmt -l .)" || { gofmt -l .; exit 1; }
+          go vet ./...
+          go test -v ./...
+      - name: Back up and restore through s3lite
+        shell: bash
+        run: |
+          set -euo pipefail
+          (cd core && cargo build --release)
+          (cd service && go build -o /tmp/s3lite ./cmd/s3lite)
+          export S3LITE_ACCESS_KEY=ci-key S3LITE_SECRET_KEY="ci-$(openssl rand -hex 12)"
+          /tmp/s3lite -addr 127.0.0.1:9300 -dir /tmp/objects &
+          sleep 1
+          export AWS_ACCESS_KEY_ID=$S3LITE_ACCESS_KEY AWS_SECRET_ACCESS_KEY=$S3LITE_SECRET_KEY GLACIER_PASSWORD="ci-$(openssl rand -hex 12)"
+          G=core/target/release/glacier R=s3:http://127.0.0.1:9300/ci/repo
+          $G init --repo $R --kdf-mem-mib 8 --kdf-time 1
+          $G backup --repo $R core/src service
+          $G restore latest --repo $R --target /tmp/restored
+          diff -r core/src /tmp/restored/src
+          diff -r service /tmp/restored/service
+          $G check --repo $R --read-data
+
+  web:
+    name: Web interface
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - working-directory: web
+        run: |
+          npm ci
+          npm test
+          npm run build

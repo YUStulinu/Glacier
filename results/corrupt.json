@@ -1,0 +1,29 @@
+{
+ "trials": 200,
+ "detected": 200,
+ "by_file_kind": {
+  "config": {
+   "trials": 6,
+   "detected": 6
+  },
+  "data": {
+   "trials": 70,
+   "detected": 70
+  },
+  "index": {
+   "trials": 60,
+   "detected": 60
+  },
+  "keys": {
+   "trials": 7,
+   "detected": 7
+  },
+  "snapshots": {
+   "trials": 57,
+   "detected": 57
+  }
+ },
+ "restores_with_wrong_content": 0,
+ "restores_reporting_errors": 175,
+ "repository_files": 38
+}
